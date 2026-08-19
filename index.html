@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barber Shop On Main | San Antonio, TX</title>
+  <meta name="description" content="Barber Shop On Main — Downtown San Antonio, TX. Precision fades, hot towel shaves, and classic cuts. 4.9★ Google rating.">
+  <meta name="theme-color" content="#121212">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Custom Scissors Pointer with Click-to-Snip Animation -->
+  <div id="scissor-cursor" class="custom-scissor-cursor" aria-hidden="true">
+    <svg class="scissor-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g class="blade-left">
+        <path d="M12 36C12 39.3137 9.31371 42 6 42C2.68629 42 0 39.3137 0 36C0 32.6863 2.68629 30 6 30C7.32548 30 8.54223 30.4302 9.53125 31.1562L24 24L38 4L42 8L22 28L21.4688 28.5312C22.4087 29.8052 23 31.3414 23 33C23 37.9706 18.9706 42 14 42" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="6" cy="36" r="3.5" stroke="currentColor" stroke-width="2"/>
+      </g>
+      <g class="blade-right">
+        <path d="M36 36C36 39.3137 38.6863 42 42 42C45.3137 42 48 39.3137 48 36C48 32.6863 45.3137 30 42 30C40.6745 30 39.4578 30.4302 38.4688 31.1562L24 24L10 4L6 8L26 28L26.5312 28.5312C25.5913 29.8052 25 31.3414 25 33C25 37.9706 29.0294 42 34 42" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="42" cy="36" r="3.5" stroke="currentColor" stroke-width="2"/>
+      </g>
+      <circle cx="24" cy="24" r="2.5" fill="#facc15" stroke="#000" stroke-width="1.5"/>
+    </svg>
+  </div>
+
+  <!-- Particle Container for Hair Snips on Click -->
+  <div id="snip-particles"></div>
+
+  <!-- Main Bento Wrapper -->
+  <div class="bento-outer-wrapper">
+
+    <!-- Top Floating Pill Navigation -->
+    <header class="bento-header-pill">
+      <div class="header-left">
+        <a href="#hero" class="brand-badge">
+          <div class="mini-pole-icon"></div>
+          <span class="brand-name">BARBER SHOP ON MAIN</span>
+        </a>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#services" class="nav-item">Services</a>
+        <a href="#about" class="nav-item">The Shop</a>
+        <a href="#reviews" class="nav-item">Reviews (4.9★)</a>
+        <a href="#contact" class="nav-item">Hours & Location</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="live-status-pill" id="live-status">
+          <span class="status-indicator live"></span>
+          <span class="status-text">OPEN NOW</span>
+        </div>
+        <a href="tel:+12105414119" class="pill-btn primary-btn">
+          <i data-lucide="phone-call"></i>
+          <span>(210) 541-4119</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Continuous Movement Marquee -->
+    <div class="continuous-marquee-ticker" aria-label="Announcement banner">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span>💈 DOWNTOWN SAN ANTONIO</span>
+          <span class="bullet">•</span>
+          <span>4.9 ★ ON GOOGLE (157+ REVIEWS)</span>
+          <span class="bullet">•</span>
+          <span>PRECISION FADES & RAZOR SHAVES</span>
+          <span class="bullet">•</span>
+          <span>WALK-INS & APPOINTMENTS</span>
+          <span class="bullet">•</span>
+          <span>FREE COLD BEVERAGES</span>
+          <span class="bullet">•</span>
+          <span>307 N MAIN AVE</span>
+          <span class="bullet">•</span>
+        </div>
+        <div class="marquee-content" aria-hidden="true">
+          <span>💈 DOWNTOWN SAN ANTONIO</span>
+          <span class="bullet">•</span>
+          <span>4.9 ★ ON GOOGLE (157+ REVIEWS)</span>
+          <span class="bullet">•</span>
+          <span>PRECISION FADES & RAZOR SHAVES</span>
+          <span class="bullet">•</span>
+          <span>WALK-INS & APPOINTMENTS</span>
+          <span class="bullet">•</span>
+          <span>FREE COLD BEVERAGES</span>
+          <span class="bullet">•</span>
+          <span>307 N MAIN AVE</span>
+          <span class="bullet">•</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN BENTO GRID HERO -->
+    <main class="bento-container" id="hero">
+      
+      <!-- HERO CARD 1: Headline & Action -->
+      <section class="bento-card card-hero-primary">
+        <div class="card-corner-tag">
+          <i data-lucide="map-pin"></i> 307 N MAIN AVE • DOWNTOWN SA
+        </div>
+
+        <div class="hero-primary-content">
+          <h1 class="main-title">BARBER SHOP<br><span class="outlined-text">ON MAIN</span></h1>
+          <p class="hero-description">
+            Downtown San Antonio’s premier barbershop. Precision fades, straight razor shaves, and classic Texas hospitality.
+          </p>
+
+          <div class="hero-action-row">
+            <a href="tel:+12105414119" class="bento-action-btn primary-action">
+              <span>CALL TO BOOK</span>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+            <a href="https://maps.google.com/?q=307+N+Main+Ave,+San+Antonio,+TX+78205" target="_blank" rel="noopener noreferrer" class="bento-action-btn secondary-action">
+              <i data-lucide="navigation"></i>
+              <span>Directions</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="card-footer-stamp">
+          <span class="stamp-pill">EST. SAN ANTONIO • CHESS & COLD DRINKS</span>
+        </div>
+      </section>
+
+      <!-- HERO CARD 2: Interior Featured Photo -->
+      <section class="bento-card card-visual-featured">
+        <div class="image-wrapper">
+          <img src="assets/images/shop-interior.jpg" alt="Barber Shop On Main interior bar counter and steel scissors logo" class="bento-img">
+          <div class="image-overlay-gradient"></div>
+        </div>
+        <div class="visual-badge-overlay">
+          <span class="experience-pill">AUTHENTIC HERITAGE</span>
+          <h3>Traditional Barbershop Vibe</h3>
+        </div>
+        <div class="card-plus-btn">
+          <i data-lucide="scissors"></i>
+        </div>
+      </section>
+
+      <!-- BENTO CARD 3: 4.9 Rating Card -->
+      <section class="bento-card card-rating-stat">
+        <div class="rating-display">
+          <div class="stars-row">
+            <i data-lucide="star" class="star filled"></i>
+            <i data-lucide="star" class="star filled"></i>
+            <i data-lucide="star" class="star filled"></i>
+            <i data-lucide="star" class="star filled"></i>
+            <i data-lucide="star" class="star filled"></i>
+          </div>
+          <div class="rating-number">4.9</div>
+        </div>
+        <div class="rating-meta">
+          <strong>157+ Google Reviews</strong>
+          <p>“Top notch cuts and unbeatable friendly atmosphere.”</p>
+        </div>
+        <a href="https://www.facebook.com/p/Barber-Shop-on-Main-100077086531959/" target="_blank" rel="noopener noreferrer" class="facebook-link-badge">
+          <i data-lucide="facebook"></i> Facebook Page
+        </a>
+      </section>
+
+      <!-- BENTO CARD 4: Storefront Mini Card -->
+      <section class="bento-card card-storefront">
+        <div class="storefront-image-wrap">
+          <img src="assets/images/shop-exterior.jpg" alt="Barber Shop On Main storefront at Alpha Center" class="bento-img">
+          <div class="storefront-tag">ALPHA CENTER • 307 N MAIN</div>
+        </div>
+        <div class="storefront-info">
+          <span><i data-lucide="map-pin"></i> Across from Public Parking</span>
+        </div>
+      </section>
+
+      <!-- BENTO CARD 5: Continuous Animated Barber Pole Card -->
+      <section class="bento-card card-barber-pole">
+        <div class="pole-display-container">
+          <div class="spinning-barber-pole">
+            <div class="pole-cap pole-cap-top"></div>
+            <div class="pole-cylinder">
+              <div class="cylinder-stripes"></div>
+              <div class="cylinder-glass-gloss"></div>
+            </div>
+            <div class="pole-cap pole-cap-bottom"></div>
+          </div>
+          <div class="pole-text-side">
+            <span class="pole-tag">MASTER BARBERS</span>
+            <h3>PRECISION CRAFT</h3>
+            <p>Fades • Line-Ups • Hot Towel Shaves</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- SECTION 2: SERVICES & PRICING (FEATURING YELLOW MOST REQUESTED DEAL) -->
+    <section class="services-section-wrapper" id="services">
+      <div class="section-header-bar">
+        <div>
+          <span class="section-sub">SERVICES & RATES</span>
+          <h2 class="section-h2">SHARP CUTS. HONEST PRICING.</h2>
+        </div>
+        <div class="section-callout">
+          <i data-lucide="coffee"></i>
+          <span>Free cold drinks with every cut</span>
+        </div>
+      </div>
+
+      <div class="services-bento-grid">
+
+        <!-- Service Item 1 -->
+        <div class="service-bento-card">
+          <div class="service-top">
+            <span class="service-name">Classic Haircut</span>
+            <span class="service-price">$30</span>
+          </div>
+          <p class="service-desc">Tailored scissor or clipper cut, neck taper, and hot lather razor neck cleanup.</p>
+          <div class="service-bottom">
+            <span class="time-tag">30 Mins</span>
+            <a href="tel:+12105414119" class="book-btn">Book Cut</a>
+          </div>
+        </div>
+
+        <!-- Service Item 2: MOST REQUESTED DEAL IN YELLOW -->
+        <div class="service-bento-card most-requested-yellow-deal">
+          <div class="deal-badge-pill">★ MOST REQUESTED DEAL</div>
+          <div class="service-top">
+            <span class="service-name">High Razor Skin Fade</span>
+            <span class="service-price">$35</span>
+          </div>
+          <p class="service-desc">Clean drop fade, taper, or skin fade finished razor-sharp with straight razor precision.</p>
+          <div class="service-bottom">
+            <span class="time-tag dark-tag">45 Mins • Popular</span>
+            <a href="tel:+12105414119" class="book-btn dark-btn">Book This Deal</a>
+          </div>
+        </div>
+
+        <!-- Service Item 3 -->
+        <div class="service-bento-card">
+          <div class="service-top">
+            <span class="service-name">Hot Towel Shave</span>
+            <span class="service-price">$30</span>
+          </div>
+          <p class="service-desc">Steamed towels, warm lather, pre-shave oil massage, and soothing finish.</p>
+          <div class="service-bottom">
+            <span class="time-tag">35 Mins</span>
+            <a href="tel:+12105414119" class="book-btn">Book Shave</a>
+          </div>
+        </div>
+
+        <!-- Service Item 4 -->
+        <div class="service-bento-card">
+          <div class="service-top">
+            <span class="service-name">Beard Sculpt & Lineup</span>
+            <span class="service-price">$20</span>
+          </div>
+          <p class="service-desc">Precision beard shaping, cheek & neckline straight razor detailing, and oil finish.</p>
+          <div class="service-bottom">
+            <span class="time-tag">20 Mins</span>
+            <a href="tel:+12105414119" class="book-btn">Book Beard</a>
+          </div>
+        </div>
+
+        <!-- Service Item 5 -->
+        <div class="service-bento-card">
+          <div class="service-top">
+            <span class="service-name">The Full Executive</span>
+            <span class="service-price">$55</span>
+          </div>
+          <p class="service-desc">Complete luxury package: Signature Haircut + Hot Towel Shave + Beard Detailing.</p>
+          <div class="service-bottom">
+            <span class="time-tag">60 Mins</span>
+            <a href="tel:+12105414119" class="book-btn">Book Package</a>
+          </div>
+        </div>
+
+        <!-- Service Item 6 -->
+        <div class="service-bento-card">
+          <div class="service-top">
+            <span class="service-name">Kids & Students</span>
+            <span class="service-price">$25</span>
+          </div>
+          <p class="service-desc">Clean, patient, top-tier haircuts for young gentlemen and students.</p>
+          <div class="service-bottom">
+            <span class="time-tag">25 Mins</span>
+            <a href="tel:+12105414119" class="book-btn">Book Cut</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: ABOUT & BARBERS -->
+    <section class="section" id="about">
+      <div class="about-bento-grid">
+        
+        <div class="about-card">
+          <span class="pill-label">THE VIBE</span>
+          <h3 class="about-h3">Downtown Heritage</h3>
+          <p class="about-p">
+            Located at <strong>307 N Main Ave</strong> in Downtown San Antonio. We focus on real barbering: expert hands, cold drinks, good music, and unmatched consistency.
+          </p>
+          <div class="amenities-row">
+            <span>✓ Walk-ins & Booking</span>
+            <span>✓ Free Cold Drinks</span>
+            <span>✓ Across from Parking</span>
+          </div>
+        </div>
+
+        <div class="about-card">
+          <span class="pill-label">THE BARBERS</span>
+          <h3 class="about-h3">The Squad</h3>
+          <div class="barbers-compact-list">
+            <div class="barber-item"><strong>Marco</strong> <span>• Master of Sharp Fades & Lineups</span></div>
+            <div class="barber-item"><strong>Orlando</strong> <span>• Skin Fades & Quick Precision Cuts</span></div>
+            <div class="barber-item"><strong>Henry</strong> <span>• Scissor Styling & Custom Cuts</span></div>
+            <div class="barber-item"><strong>Isabel</strong> <span>• Consistent Cuts & Hot Towel Shaves</span></div>
+            <div class="barber-item"><strong>Blake & Eric</strong> <span>• Modern Styles & Friendly Vibes</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: GOOGLE REVIEWS -->
+    <section class="section" id="reviews">
+      <div class="section-header-bar">
+        <div>
+          <span class="section-sub">REAL PRAISE</span>
+          <h2 class="section-h2">WHAT LOCALS SAY</h2>
+        </div>
+        <div class="google-rating-tag">
+          <strong>4.9 ★★★★★</strong> <span>(157+ Google Reviews)</span>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>“Marco is one of the best barbers in SA. Perfect fade, clean lineup, and great environment.”</p>
+          <span class="reviewer">— e j890 (Local Guide)</span>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>“Henry is super talented and I will be recommending him to all my family and friends!”</p>
+          <span class="reviewer">— Nathan Ortega</span>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>“Got my cut with Orlando. Friendly shop, great prices, and a super clean fade.”</p>
+          <span class="reviewer">— Brian Dillard</span>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>“Old school barbershop feel. Chess board, sports on, and always warm hospitality.”</p>
+          <span class="reviewer">— Michael Torres</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: HOURS & LOCATION -->
+    <section class="section" id="contact">
+      <div class="location-bento-grid">
+        <div class="location-card">
+          <span class="pill-label">VISIT</span>
+          <h3>307 N Main Ave</h3>
+          <p class="location-sub">Downtown San Antonio, TX 78205 (Alpha Center)</p>
+
+          <div class="hours-list">
+            <div class="hour-row"><span>Mon – Fri:</span> <strong>9:00 AM – 6:00 PM</strong></div>
+            <div class="hour-row"><span>Saturday:</span> <strong>9:00 AM – 5:00 PM</strong></div>
+            <div class="hour-row"><span>Sunday:</span> <strong>Closed</strong></div>
+          </div>
+
+          <a href="tel:+12105414119" class="btn-call-large">
+            <i data-lucide="phone"></i>
+            <span>CALL (210) 541-4119</span>
+          </a>
+        </div>
+
+        <div class="map-card">
+          <iframe 
+            src="https://maps.google.com/maps?q=307%20N%20Main%20Ave%20San%20Antonio%20TX%2078205&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            title="Barber Shop On Main Google Maps">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bento-footer">
+      <div class="footer-left">
+        <strong>BARBER SHOP ON MAIN</strong>
+        <p>307 N Main Ave, San Antonio, TX 78205 • 4.9 ★ Rated</p>
+      </div>
+      <div class="footer-right">
+        <a href="tel:+12105414119">Call</a>
+        <a href="https://www.facebook.com/p/Barber-Shop-on-Main-100077086531959/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://maps.google.com/?q=307+N+Main+Ave,+San+Antonio,+TX+78205" target="_blank" rel="noopener noreferrer">Directions</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
